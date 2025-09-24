@@ -276,19 +276,23 @@ a{color:inherit;text-decoration:none}
     .mvv{
         height: auto;
         position:relative; 
-        overflow:hidden
+        overflow:hidden;
     }
 }
 .mvv__bg{
-  position:absolute; 
-  inset:0; 
-  background-size:cover; 
-  background-position:center;
-  filter:brightness(.4);
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.4);
+  z-index: 0;                 /* 🔑 fica atrás */
 }
 .mvv__cards{
+  position: relative;          /* 🔑 cria contexto */
+  z-index: 1;                  /* 🔑 fica na frente do BG */
   display: grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 18px;                   /* você não tinha gap aqui */
   padding: 90px 0;
 }
 .mvv-card{
