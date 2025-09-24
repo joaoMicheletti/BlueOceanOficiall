@@ -1,0 +1,494 @@
+<!--    
+
+    /$$ /$$    /$$                /$$$$$$             /$$$$$$   /$$                                                       /$$ /$$   
+   /$$/| $$   | $$               /$$__  $$           /$$__  $$ | $$                                                      /$$/|  $$  
+  /$$/ | $$   | $$ /$$$$$$/$$$$ | $$  \__/  /$$$$$$ | $$  \__//$$$$$$   /$$  /$$  /$$  /$$$$$$   /$$$$$$   /$$$$$$      /$$/  \  $$ 
+ /$$/  |  $$ / $$/| $$_  $$_  $$|  $$$$$$  /$$__  $$| $$$$   |_  $$_/  | $$ | $$ | $$ |____  $$ /$$__  $$ /$$__  $$    /$$/    \  $$
+|  $$   \  $$ $$/ | $$ \ $$ \ $$ \____  $$| $$  \ $$| $$_/     | $$    | $$ | $$ | $$  /$$$$$$$| $$  \__/| $$$$$$$$   /$$/      /$$/
+ \  $$   \  $$$/  | $$ | $$ | $$ /$$  \ $$| $$  | $$| $$       | $$ /$$| $$ | $$ | $$ /$$__  $$| $$      | $$_____/  /$$/      /$$/ 
+  \  $$   \  $/   | $$ | $$ | $$|  $$$$$$/|  $$$$$$/| $$       |  $$$$/|  $$$$$/$$$$/|  $$$$$$$| $$      |  $$$$$$$ /$$/      /$$/  
+   \__/    \_/    |__/ |__/ |__/ \______/  \______/ |__/        \___/   \_____/\___/  \_______/|__/       \_______/|__/      |__/   
+                                                                                                                                    
+                                                                                                                                    
+     Nos siga em nossa rede social:  https://www.instagram.com/vm_software/                                                                                                                               
+                                                                                                                                   
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./favicon.png" type="image/x-icon" />
+  <title>Blue Ocean</title>
+
+  <!-- Fonte próxima do layout -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function form0() {
+        let nome0 = document.querySelector('#nome0');
+        let celular0 = document.querySelector('#celular0');
+        let email0 = document.querySelector('#email0');
+        let msg0 = document.querySelector('#msg0');
+        if(nome0.value === '' ){
+            return
+        }
+        if(celular0.value == '' ){
+            return
+        }
+        if(email0.value ==='' ){
+            return
+        }
+        if(msg0.value === '' ){
+            return
+        }
+        // número do WhatsApp da empresa (coloque no formato com DDI + DDD)
+        let numeroWhats = "5511973872491";
+
+        // mensagem formatada
+        let mensagem = 
+        `Olá, venho através do site,  meu nome é *${nome0.value}* 👋
+        📱 Telefone: ${celular0.value}
+        📧 E-mail: ${email0.value}
+
+        Mensagem:
+        ${msg0.value}`;
+
+        // codifica a mensagem para o link
+        let url = "https://wa.me/" + numeroWhats + "?text=" + encodeURIComponent(mensagem);
+
+        // redireciona para o WhatsApp
+        window.open(url, '_blank');
+    }
+    function form1(){
+        let nome1 = document.querySelector('#nome1');
+        let celular1 = document.querySelector('#celular1');
+        let email1 = document.querySelector('#email1');
+        let msg1 = document.querySelector('#msg1');
+        if(nome1.value === '' ){
+            return
+        }
+        if(celular1.value == '' ){
+            return
+        }
+        if(email1.value ==='' ){
+            return
+        }
+        if(msg1.value === '' ){
+            return
+        }
+        // número do WhatsApp da empresa (coloque no formato com DDI + DDD)
+        let numeroWhats = "5511973872491";
+
+        // mensagem formatada
+        let mensagem = 
+        `Olá, venho através do site,  meu nome é *${nome1.value}* 👋
+        📱 Telefone: ${celular1.value}
+        📧 E-mail: ${email1.value}
+
+        Mensagem:
+        ${msg0.value}`;
+
+        // codifica a mensagem para o link
+        let url = "https://wa.me/" + numeroWhats + "?text=" + encodeURIComponent(mensagem);
+
+        // redireciona para o WhatsApp
+        window.open(url, '_blank');
+
+    }
+    function redirect(){
+        window.location.reload();
+    }
+</script>
+
+</head>
+<body>
+
+  <!-- =======================================================
+       HEADER / NAV
+       - Logo à esquerda, menu ao centro, CTA à direita
+  ======================================================== -->
+  <header class="header">
+    <div class="container header__wrap">
+        <!-- Trocar pela sua logo -->
+        <img onclick="redirect()" id="logHeader" src="assets/logo.webp" alt="Blue Ocean">
+      
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="#home">Página inicial</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#inscricoes">Inscrições</a>
+        <a target="_blank" href="https://blueoceaneventos.com.br/gasenergyweek/">Gasenergyweek</a>
+        <a target="_blank" href="https://blueoceaneventos.com.br/oemenergy/">O&M energy</a>
+        <a href="#projetos">Projetos Online</a>
+      </nav>
+
+      <a class="btn btn--outline" href="#contato">Entre em contato</a>
+
+      <!-- Botão mobile -->
+      <button class="hamb" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <nav id="menu" class="mobile">
+    <a href="#home">Página inicial</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#inscricoes">Inscrições</a>
+    <a href="#gasenergy">Gasenergyweek</a>
+    <a href="#osm">OSM energy</a>
+    <a href="#projetos">Projetos Online</a>
+    <a class="btn btn--outline" href="#contato">Entre em contato</a>
+  </nav>
+
+  <!-- =======================================================
+       HERO
+       - Fundo imagem, título à esquerda, form à direita
+  ======================================================== -->
+  <section id="home" class="hero">
+    <!-- Imagem de fundo (troque pela sua) -->
+    <div class="hero__bg" style="background-image:url('assets/bgHome.webp');"></div>
+
+    <div class="container hero__grid">
+      <!-- Texto -->
+      <div class="hero__text">
+        <h1>
+          <span class="text-blue">Seu negócio</span><br>
+          nossa missão.
+        </h1>
+        <p class="subtitle">Eventos que aceleram negócios, encurtam ciclos de vendas</p>
+
+        <div class="hero__ctas">
+          <a href="#contato" class="btn btn--primary">Quero acelerar meu negócio</a>
+          <a href="#cases" class="btn btn--ghost">conheça nossos cases</a>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <aside class="card form-card">
+        <h3>Entre em contato</h3>
+        <form>
+          <label>
+            <span>Nome completo</span>
+            <input type="text" id="nome0" name="nome" placeholder="Nome completo..." required>
+          </label>
+
+          <label>
+            <span>Celular</span>
+            <input type="tel" id="celular0" name="celular" placeholder="(00) 00000-0000" required>
+          </label>
+
+          <label>
+            <span>E-mail</span>
+            <input type="email" id="email0" name="email" placeholder="email@exemplo.com" required>
+          </label>
+
+          <label>
+            <span>Mensagem</span>
+            <textarea name="mensagem" id="msg0" rows="4" placeholder="mensagem..." required></textarea>
+          </label>
+
+          <button onclick="form0()" class="btn btn--primary btn--full" type="submit">Enviar</button>
+        </form>
+      </aside>
+    </div>
+
+    <!-- Degradê na base (efeito do layout) -->
+    <div class="hero__fade"></div>
+  </section>
+
+  <!-- =======================================================
+       SOBRE + VÍDEO
+  ======================================================== -->
+  
+  <section id="sobre" class="section">
+    <div class="container about__grid">
+      <div class="about__text">
+        <h2 id="TitleSobre">Sobre Nós</h2>
+        <strong><p>Com um nome que deriva 100% da estratégia do oceano azul, buscamos sempre pelo novo e diferenciado. Nosso objetivo não é de competir, mas sim de se destacar.</p></strong>
+        <p>
+            Somos especialistas em criar e realizar eventos que 
+            ultrapassam limites e exploram o novos mercados. 
+            Ao longo da ultima década, os Bluers têm realizado 
+            encontros nos mais diversos setores, formatos e 
+            áreas de atuação. Seja presencial ou digitalmente. 
+            com nossa equipe dedicada atuamos em todo o Brasil e 
+            já atendemos clientes internacionais, 
+            sempre preparados para crescer em escala global.
+        </p>
+        </div>
+
+      <!-- Thumb de vídeo ilustrativa -->
+      <a class="video-thumb" aria-label="Assistir vídeo">
+        <img src="assets/bgHome.jpg" alt="Thumb do vídeo">
+        
+      </a>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       3 PILARES
+  ======================================================== -->
+  <div id="divisor">.</div>
+  <section class="section section--blend">
+    <div class="container pillars">
+      <div class="pillars__intro">
+        <h3>Nossa força está<br>em três pilares:</h3>
+        <p>
+            Esses pilares sustentam projetos com impacto real e duradouro.
+
+            Nascemos da experiência de líderes de multinacionais de eventos corporativos e carregamos em nosso DNA a estratégia do Oceano Azul, criando soluções únicas para mercados pouco explorados.
+
+            Já conquistamos espaço em setores como energia eólica, odontologia e educação, sempre com autenticidade e diferenciação.
+
+            Nosso propósito é claro: transformar cada evento em uma experiência inesquecível, que gera valor, conexões e novas oportunidades para clientes e parceiros.
+        </p>
+      </div>
+
+      <div class="pillars__cards">
+        <article class="icon-card">
+          <img src="assets/marketing.webp" alt="Marketing" />
+          <h4>Marketing</h4>
+        </article>
+
+        <article class="icon-card">
+          <img src="assets/comercial.webp" alt="Comercial" />
+          <h4>Comercial</h4>
+          
+        </article>
+
+        <article class="icon-card">
+          <img src="assets/inovacao.webp" alt="Inovação" />
+          <h4>Inovação</h4>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       MISSÃO / VALORES / VISÃO (cards sobre imagem)
+  ======================================================== -->
+  <section class="mvv">
+    <div class="mvv__bg" style="background-image:url('assets/bgmvv.webp');"></div>
+
+    <div class="container mvv__cards">
+      <article class="mvv-card">
+        <img src="assets/missao.webp" alt="missão blue"/>
+        <h4>Missão Blue</h4>
+        <p>
+            Acelerar os negócios de nossos clientes por 
+            meio da criação e realização de eventos inovadores, 
+            capazes de gerar conexões de valor, encurtar 
+            processos de vendas e abrir novas oportunidades de 
+            mercado, sempre com foco no cliente, em seus objetivos e 
+            no impacto positivo para todos os stakeholders.
+        </p>
+      </article>
+
+      <article class="mvv-card mvv-card--highlight">
+        <img src="assets/valor.webp" alt="missão blue"/>
+        <h4>Valores Blue</h4>
+        <p id="centro">
+            <strong> Excelência:</strong> como princípio inegociável em tudo o que fazemos.<br/><br/>
+            
+            <strong>Integridade:</strong> transparência e ética em cada decisão e relacionamento.<br/><br/>
+            <strong>Respeito: </strong>valorização das pessoas e criação de um ambiente seguro, inclusivo e colaborativo. Foco no Cliente: cada projeto é guiado pelo que realmente agrega valor.<br/><br/>
+
+            <strong>Inovação </strong> busca constante por diferenciação e projetos em mercados inexplorados. Coletividade e Autonomia: mais respeito, menos hierarquia, incentivando iniciativa e colaboração.
+            <br/><br/><strong>Autenticidade: </strong>assimetria em relação à concorrência, mantendo nossa identidade única.
+        </p>
+      </article>
+
+      <article class="mvv-card">
+        <img src="assets/visao.webp" alt="missão blue"/>
+        <h4>Visão Blue</h4>
+        <p>
+            Ser reconhecida como a empresa definitiva em encontros de conteúdo, 
+            networking e negócios, referência em inovação, excelência e 
+            geração de valor real e perceptível para empresas, líderes e 
+            setores em que atuamos, expandindo continuamente nossas fronteiras 
+            para o cenário global.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       O QUE NOS MOVE (grid de 4 imagens)
+  ======================================================== -->
+  <section class="sectioN">
+    <div class="container moves">
+      <h3 class="section-title">O que nos move</h3>
+
+      <div class="moves__grid">
+        <div class="move-card" style="background-image:url('assets/focoCliente.webp');">
+          <span>Foco no cliente</span>
+        </div>
+        <div class="move-card" style="background-image:url('assets/conecoxoes.webp');">
+          <span>Conexões de alto nível</span>
+        </div>
+        <div class="move-card" style="background-image:url('assets/memoravel.webp');">
+          <span>Experiência memorável</span>
+        </div>
+        <div class="move-card" style="background-image:url('assets/ambiente.webp');">
+          <span>Ambiente leve</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       EVENTOS + LOGOS + NÚMEROS
+  ======================================================== -->
+  <section id="inscricoes" class="section section--deep">
+    <div class="container events">
+      <h3 class="section-title">Eventos</h3>
+
+      <div class="events__banners">
+        <a target="_blank" href="https://blueoceaneventos.com.br/gasenergyweek/" class="event-banner">
+          <img src="assets/gas.webp" alt="Gas & Energy Week">
+        </a>
+        <a target="_blank" href="https://blueoceaneventos.com.br/oemenergy/" class="event-banner">
+          <img src="assets/oem.webp" alt="Wind O&M">
+        </a>
+      </div>
+    </div>
+  </section>
+<!-- =======================================================
+       lOGOS PASSEANDO 
+  ======================================================== -->
+  <section class="partners">
+    <!-- Faixa 1 (esquerda -> direita) -->
+    <div class="row row-a" aria-label="parceiros linha A">
+        <div class="track">
+        <div class="logo"><img src="assets/beckhoff.webp" alt="Petrobras"></div>
+        <div class="logo"><img src="assets/servicenow.webp" alt="TBG"></div>
+        <div class="logo"><img src="assets/genesys.webp" alt="ENEVA"></div>
+        <div class="logo"><img src="assets/blip.webp" alt="Andritz"></div>
+        <div class="logo"><img src="assets/axix.webp" alt="Emerson"></div>
+        <!-- adicione mais logos aqui -->
+        <div class="logo"><img src="assets/beckhoff.webp" alt="Petrobras"></div>
+        <div class="logo"><img src="assets/servicenow.webp" alt="TBG"></div>
+        <div class="logo"><img src="assets/genesys.webp" alt="ENEVA"></div>
+        <div class="logo"><img src="assets/blip.webp" alt="Andritz"></div>
+        <div class="logo"><img src="assets/axix.webp" alt="Emerson"></div>
+        </div>
+    </div>
+
+    <!-- Faixa 2 (direita -> esquerda) -->
+    <div class="row row-b" aria-label="parceiros linha B">
+        <div class="track">
+        <div class="logo"><img src="assets/beckhoff.webp" alt="Petrobras"></div>
+        <div class="logo"><img src="assets/servicenow.webp" alt="TBG"></div>
+        <div class="logo"><img src="assets/genesys.webp" alt="ENEVA"></div>
+        <div class="logo"><img src="assets/blip.webp" alt="Andritz"></div>
+        <div class="logo"><img src="assets/axix.webp" alt="Emerson"></div>
+        <!-- adicione mais logos aqui -->
+        <div class="logo"><img src="assets/beckhoff.webp" alt="Petrobras"></div>
+        <div class="logo"><img src="assets/servicenow.webp" alt="TBG"></div>
+        <div class="logo"><img src="assets/genesys.webp" alt="ENEVA"></div>
+        <div class="logo"><img src="assets/blip.webp" alt="Andritz"></div>
+        <div class="logo"><img src="assets/axix.webp" alt="Emerson"></div>
+        </div>
+    </div>
+    </section>
+
+    <!-- =======================================================
+       nUMEROS
+  ======================================================== -->
+<section id="Nnumber">
+    <h3 class="section-title">Nossos Números</h3>
+    <div class="numbers">
+        <div class="number-card"><strong>+50%</strong><span>das 100 maiores empresas do Brasil já participaram de nossos encontroso</span></div>
+        <div class="number-card"><strong>+10.000</strong><span>participantes em encontros de informação e negócios</span></div>
+        <div class="number-card"><strong>Milhares</strong><span>de views em nossas transmissões online</span></div>
+    </div>
+</section>
+
+  <!-- =======================================================
+       CTA CONTATO (form centralizado)
+  ======================================================== -->
+  <section id="contato" class="section section--cta">
+    <div class="container">
+      <h2 class="section-title">Vamos acelerar seus negócios?</h2>
+
+      <div class="card form-card form-card--center">
+        <form>
+          <label>
+            <span>Nome completo</span>
+            <input type="text" id="nome1" name="nome2" placeholder="Nome completo..." required>
+          </label>
+          <label>
+            <span>Celular</span>
+            <input type="tel" id="celular1" name="celular2" placeholder="(00) 00000-0000" required>
+          </label>
+          <label>
+            <span>E-mail</span>
+            <input type="email" id="email1" name="email2" placeholder="email@exemplo.com" required>
+          </label>
+          <label>
+            <span>Mensagem</span>
+            <textarea name="mensagem2" id="msg1" rows="4" placeholder="mensagem..." required></textarea>
+          </label>
+          <button onclick="form1()" class="btn btn--primary btn--full" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       FOOTER (criado sob medida)
+  ======================================================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img id="logoFooter" src="assets/logo.webp" alt="Blue Ocean">
+        <p>Business Events • Conteúdo, networking e experiências que geram resultados.</p>
+      </div>
+
+      <div class="footer__col">
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#inscricoes">Eventos</a></li>
+          <li><a href="#projetos">Projetos Online</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="mailto:contato@blueocean.com.br">contato@blueocean.com.br</a></li>
+          <li><a href="tel:+5511999999999">+55 (11)97387-2491</a></li>
+          <li><a href="#contato">Formulário</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Blue Ocean — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script simples para menu mobile e ano no footer -->
+  <script>
+    // Ano atual no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const hamb = document.querySelector('.hamb');
+    const menu = document.getElementById('menu');
+    hamb.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      hamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
+</body>
+</html>
